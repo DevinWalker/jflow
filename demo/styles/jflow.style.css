@@ -1,21 +1,13 @@
-/* 
-
-jFlow Plus v2 Demo CSS 
-
-Description: Demonstation CSS for jFlow Plus
-
-Creator: Devin Walker
-
-Date: July 29, 2010
-
-
+/*
+jFlow Demo CSS
+Description: Demo CSS for jFlow
 */
 
 #sliderContainer { width: 940px; height: 300px; position: relative; border-top: 5px solid #999; border-bottom: 5px solid #999; margin: 0 auto; }
 
-.slideContent {  background:url("../images/contentBg.png") repeat scroll 0 0 transparent; position: absolute; bottom:0px; right:0px; padding: 10px; width: 920px; }
+.slideContent {  background:url("../images/contentBg.png") repeat scroll 0 0 transparent; position: absolute; bottom:0px; right:0px;   padding: 15px;   width: 910px; }
 
-.slide h3 {  font: 26px/1em 'Rokkitt', serif; color: #FFF;  margin: 0 0 5px 0; }
+.slide h3 {  font: 700 26px/1em 'Open Sans', sans-serif; color: #FFF;  margin: 0 0 10px 0; }
 
 .slide p { font-size: 14px; color: #FFF; margin: 0; }
 

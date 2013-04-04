@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jFlow Plus v2</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+    <link href="styles/style.css" type="text/css" rel="stylesheet"/>
+    <link href="styles/jflow.style.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="../jflow.plus.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("#myController").jFlow({
+
+                controller: ".jFlowControl", // must be class, use . sign
+
+                slideWrapper: "#jFlowSlider", // must be id, use # sign
+
+                slides: "#mySlides",  // the div where all your sliding divs are nested in
+
+                selectedWrapper: "jFlowSelected",  // just pure text, no sign
+
+                effect: "flow", //this is the slide effect (rewind or flow)
+
+                width: "940px",  // this is the width for the content-slider
+
+                height: "300px",  // this is the height for the content-slider
+
+                duration: 400,  // time in milliseconds to transition one slide
+
+                pause: 5000, //time between transitions
+
+                prev: ".jFlowPrev", // must be class, use . sign
+
+                next: ".jFlowNext", // must be class, use . sign
+
+                auto: true
+
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <div id="logoWrap">
+            <h1>jFlow <span>@wordimpress</span></h1>
+        </div>
+    </div>
+    <!--
+    **********************************************
+    Start of jFlow DOM
+    **********************************************
+    -->
+    <div id="sliderContainer">
+        <div id="mySlides">
+            <div id="slide1" class="slide"><img src="images/jflow-sample-slide1.jpg" alt="Slide 1 jFlow Plus"/>
+
+                <div class="slideContent">
+                    <h3>You Asked, jFlow Delivered</h3>
+
+                    <p>It's all about the Community and giving back. To keep with this tradition, jFlow Plus now has more of the features you want.</p>
+                </div>
+            </div>
+            <div id="slide2" class="slide"><img src="images/jflow-sample-slide2.jpg" alt="Slide 2 jFlow Plus"/>
+
+                <div class="slideContent">
+                    <h3>W3C Valid</h3>
+
+                    <p>Are you a stickler for writing valid code? So is jFlow. Run this puppy through W3C's validator to see it pass the test!</p>
+                </div>
+            </div>
+            <div id="slide3" class="slide"><img src="images/jflow-sample-slide3.jpg" alt="Slide 3 jFlow Plus"/>
+
+                <div class="slideContent">
+                    <h3>Frequent Code Updates</h3>
+
+                    <p>This slider is actively developed and used by thousands of websites. More features coming soon including more effects and options.</p>
+                </div>
+            </div>
+            <div id="slide4" class="slide"><img src="images/jflow-sample-slide4.jpg" alt="Slide 3 jFlow Plus"/>
+
+                <div class="slideContent">
+                    <h3>Notice the Slide Navigation?</h3>
+
+                    <p>That's a new feature. Click on the paging buttons in the top-right to quickly jump to any jFlow slide number.</p>
+                </div>
+            </div>
+        </div>
+        <div id="myController">
+            <span class="jFlowControl"></span> <span class="jFlowControl"></span> <span class="jFlowControl"></span>
+            <span class="jFlowControl"></span>
+        </div>
+        <div class="jFlowPrev"></div>
+        <div class="jFlowNext"></div>
+    </div>
+    <!--end: jFlow DOM -->
+
+    <!--
+    **********************************************
+    YOU CAN IGNORE THE FOLLOWING HTML
+
+    DEMO CONTENT:
+
+    ************************************
+     -->
+    <div id="content">
+        <div id="main">
+            <div class="sidebar-widget">
+                <h3 class="widgettitle">jFlow's Resources</h3>
+                <ul class="check-list">
+                    <li>
+                        <a href="https://github.com/DevinWalker/jflow" title="jFlow Github Reposity" target="_blank">jFlow GitHub Repo</a>
+                    </li>
+                    <li>
+                        <a href="http://www.wordimpressed.com/demos/jflowplus-v2/" title="Visit the jFlow Demo" target="_blank">Demo Page</a>
+                    </li>
+                    <li><a href="http://wordimpress.com" title="WordImpress">WordImpress</a></li>
+                    <li><a href="http://imdev.in" title="Devin Walker">Devin Walker</a></li>
+
+                    <li><a href="http://www.jquery.com" title="jQuery">jQuery.com</a></li>
+                </ul>
+            </div>
+            <!--end: widget -->
+            <div class="sidebar-widget">
+                <h3 class="widgettitle">Bug Report</h3>
+
+                <p>If you notice any bugs while using jFlow please use the Issues area in the GitHub repo:
+                    <a href="https://github.com/DevinWalker/jflow/issues" title="Submit a Bug Report" target="_blank">GitHub Issues jFlow</a> which is monitored. Please explain the bug in full and if possible a link to an example.
+                </p>
+            </div>
+            <!--end: widget -->
+            <div class="sidebar-widget">
+                <h3 class="widgettitle">Code Contribution</h3>
+
+                <p>Feel free to fork, modify, enhance and hack this plugin to your heart's delight. If you would like help take jFlow into the future, contribute your enhancements to via
+                    <strong><a href="https://github.com/DevinWalker/jflow/" target="_blank">GitHub</a></strong>. </p>
+            </div>
+            <!--end: widget -->
+        </div>
+        <!--end: main -->
+        <div class="footer">
+            <img src="images/demo-page/browsers.jpg" alt="jFlow has been tested on Internet Explorer, Chrome, Firefox, Safari and Opera"/>
+        </div>
+    </div>
+    <!--end: content -->
+
+</div>
+<!--end: container -->
+
+</body>
+</html>
