@@ -1,0 +1,47 @@
+/* 
+
+jFlow Plus v2 Demo CSS 
+
+Description: Demonstation CSS for jFlow Plus
+
+Creator: Devin Walker
+
+Date: July 29, 2010
+
+
+*/
+
+#sliderContainer { width: 940px; height: 300px; position: relative; border-top: 5px solid #999; border-bottom: 5px solid #999; margin: 0 auto; }
+
+.slideContent {  background:url("../images/contentBg.png") repeat scroll 0 0 transparent; position: absolute; bottom:0px; right:0px; padding: 10px; width: 920px; }
+
+.slide h3 {  font: 26px/1em 'Rokkitt', serif; color: #FFF;  margin: 0 0 5px 0; }
+
+.slide p { font-size: 14px; color: #FFF; margin: 0; }
+
+.jFlowSlideContainer { overflow: hidden; }
+
+.jFlowSlideContainer a { color: #F90; text-decoration: none; font-style: italic; }
+
+.jFlowSlideContainer a:hover { text-decoration: none; }
+
+.jFlowSlideContainer a:focus { position: relative; top: 1px; }
+
+.jFlowNext { background:url("../images/arrows.png") no-repeat scroll 0 -35px transparent; height:130px; position:absolute; top:75px; right: -50px; width:50px; cursor:pointer; }
+
+.jFlowPrev { background:url("../images/arrows.png") no-repeat scroll -84px -35px transparent; height:130px; position:absolute; top:75px; left: -50px; width:50px; cursor:pointer; }
+
+.jFlowPrev:hover { background-position: -84px -235px; }
+
+.jFlowNext:hover { background-position: 0px -235px; }
+
+
+/* controller pagination */
+
+#myController {position: absolute; top: 5px; right: 5px; }
+
+.jFlowControl { background:url("../images/bullet.png") no-repeat scroll 0px 0px transparent;  float: left; width: 15px; height: 15px;}
+
+.jFlowControl:hover { background-position: -32px 0px; cursor: pointer; }
+
+.jFlowSelected, .jFlowSelected:hover {background-position: -15px 0px;   }
