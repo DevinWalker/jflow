@@ -56,7 +56,7 @@ Start of necessary jFlow scripts:
 <div id="container">
   <div id="header">
     <div id="logoWrap">
-      <h1>jFlow Plus v2 <span>By Devin Walker, WordImpressed</span></h1>
+      <h1>jFlow <span>@wordimpress</span></h1>
     </div>
   </div>
   <!--
@@ -113,71 +113,7 @@ Start of necessary jFlow scripts:
   <div id="content">
     <div id="main">
       <div id="intro">
-        <h2 class="intro-heading">Thanks for Downloading jFlow Plus!</h2>
-        <p class="intro-p">Congratulations, you are now ready to get started using jFlow Plus on your next project.  Using this file and the demo page on wordimpressed.com your first steps should be to setup the scripts, DOM and styles.</p>
-      </div>
-      <h2>About jFlow</h2>
-      <p><strong>jFlow Plus v2</strong> is a rewrite of the popular jFlow Plus slider released in 2009.  The original jFlow slider was released in 2008 and has gained popularity for its ease of use and compact size.  In this latest version there's a number of updates including effects, documentation and compatibility.</p>
-          
-          <h3>How to Setup jFlow</h3>
-          <p>The following is a brief overview on how to setup jFlow for your web project.  It is written for web developers with basic knowledge of DOM, jS and CSS.</p> 
-         
-          
-          <h4>Include the Scripts in your document head</h4>
-          <p>The first step to setting up any jQuery plugin is ensuring you have your necessary stylesheets and javascript included in your document.  The best place is the head of your document head to ensure that all necessary scripts are loaded first by the browser.</p>
-          <pre>
-          <code>
-&lt;head&gt;
 
-&lt;link href="styles/jflow.style.css" type="text/css" rel="stylesheet"/&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;scripts/jflow.plus.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-
-	$(document).ready(function(){
-
-	    $(&quot;#myController&quot;).jFlow({
-
-			controller: &quot;.jFlowControl&quot;, // must be class, use . sign
-
-			slideWrapper : &quot;#jFlowSlider&quot;, // must be id, use # sign
-
-			slides: &quot;#mySlides&quot;,  // the div where all your sliding divs are nested in
-
-			selectedWrapper: &quot;jFlowSelected&quot;,  // just pure text, no sign
-			
-			effect: &quot;flow&quot;, //this is the slide effect (rewind or flow)
-
-			width: &quot;940px&quot;,  // this is the width for the content-slider
-
-			height: &quot;300px&quot;,  // this is the height for the content-slider
-
-			duration: 400,  // time in milliseconds to transition one slide
-			
-			pause: 5000, //time between transitions
-
-			prev: &quot;.jFlowPrev&quot;, // must be class, use . sign
-
-			next: &quot;.jFlowNext&quot;, // must be class, use . sign
-
-			auto: true	
-
-    });
-
-});
-
-&lt;/script&gt;
-
-&lt;/head&gt;      
-          </code>
-          </pre>
-          
-          <h4>The jFlow DOM</h4>
-          <p>Copy and paste the following markup within your body tags in the appropriate DOM zone.</p>
-          <pre>
           <code>
 &lt;div id="sliderContainer"&gt;
 
