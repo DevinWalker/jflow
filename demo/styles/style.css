@@ -19,59 +19,48 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0 50px 50px 50px; background: url("../images/bg.png") repeat top left transparent; }
+body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0 50px 50px 50px; background: url("../images/background-pattern.png") repeat top left transparent; }
 
-a { color:#838c1c; text-decoration: none; }
+a { color: #08c; text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 
-#container { background: #FFF; width: 940px; margin: 0 auto; -moz-box-shadow: 0 0 10px 5px #c3c3c3; -webkit-box-shadow:0 0 10px 5px #c3c3c3; box-shadow:0 0 10px 5px #c3c3c3; }
+#container { background: #FFF; width: 940px; margin: 0 auto; -moz-box-shadow: 0 0 10px 5px #c3c3c3; -webkit-box-shadow: 0 0 10px 5px #c3c3c3; box-shadow: 0 0 10px 5px #c3c3c3; }
 
 /* header */
 
-#header {  overflow: hidden; }
+#header { overflow: hidden; position: relative; height: 100px;}
 
-#logoWrap { background:url('../images/demo-page/jflow-logo.png') no-repeat top left transparent; margin: 5px auto 10px; width: 310px; height: 100px; position: relative; }
+#logoWrap { background: url('../images/demo-page/jflow-logo.png') no-repeat top left transparent; float:left; margin: 5px 0 0 20px; width: 210px; height: 90px; position: relative; }
 
-#logoWrap h1 { font: 56px/1em 'Open Sans', sans-serif; color:#4f4e4e; text-shadow: 1px 1px 2px #9f9f9f; margin: 0; text-indent: -9999px;}
+#logoWrap h1 { display: none; }
 
-#logoWrap h1 span { font-size: 18px; line-height: 30px; text-transform: uppercase; text-shadow: 0 0 0; text-indent: -9999px;}
+.github{ margin: 0 0 18px;}
+.github a { font-size: 24px; font-weight: 600; padding: 0; line-height: 25px; margin: 0 0 0 10px; color: #000;}
+.github a:hover { color: #08c; }
+.github a span { background: url('../images/demo-page/github-icon.png') no-repeat 0 0 transparent;  display: inline-block; margin: 0px 8px 0 0; height: 28px; width: 28px; position: relative; top: 7px;}
 
-#headerSocials { overflow: hidden; position: absolute; bottom: 15px; left: 0; }
+#headerSocials { overflow: hidden; position: absolute; top: 9px; right: 40px; }
 
 .socialItem { float: left; }
+#twitter { width: 175px; }
 
-#adWrap { float: right; margin: 25px 30px 15px; background: #DDD; }
-
-#downloadWrap { float: right; text-align: center; margin: 0 30px 0 0; }
-
-#downloadWrap a {  padding: 0 40px 0 0; font-style: italic; font-size: 14px; float: left; line-height: 30px; }
-
-#downloadWrap a:hover { background-position: right -31px; color:#5d6410; }
 
 /* content */
 
 #content { padding: 20px 20px 30px; overflow: hidden; }
 
-#content p { font-size: 14px; color:#646464; line-height: 24px; margin: 0 0 10px; }
+#content p { font-size: 14px; color: #646464; line-height: 24px; margin: 0 0 10px; }
 
 #content h2, #content h3, #content h4 { font-size: 20px; font-weight: bold; padding: 15px 0 20px; }
 
 #main { float: left; width: 900px; }
 
-#sidebar { float: right; width: 250px; }
-
-/* intro */
-
-#content .intro-heading { font:30px/42px 'Rokkitt', serif; color:#4f4e4e; border-bottom: 1px solid #d6d6d6; margin: 0 0 15px; padding: 0; }
-
-#content .intro-p { font-size: 18px; line-height: 22px; font-style: italic;  }
-
 /* sidebar */
 
-.sidebar-widget { margin: 10px 0 20px; float: left; width: 260px; padding: 0 20px;}
+.sidebar-widget { margin: 10px 0 20px; float: left; width: 260px; padding: 0 20px; }
 
-#sidebar .widgettitle { font:24px/30px 'Rokkitt', serif; color:#4f4e4e; margin: 0 0 15px; padding: 0; }
+#sidebar .widgettitle { font: 24px/30px 'Rokkitt', serif; color: #4f4e4e; margin: 0 0 15px; padding: 0; }
 
 .ad-widget { padding: 20px 0 0; }
 
@@ -80,25 +69,3 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 .check-list { margin: 0; }
 
 .check-list li { background: url('../images/demo-page/checkmark.png') no-repeat 0 0 transparent; padding: 0 0 12px 20px; font-size: 14px; line-height: 20px; font-style: italic; }
-
-#w3c { padding-bottom: 0; }
-
-#w3c span { position: relative; top: -15px; }
-
-#w3c a { padding: 0 0 0 5px; position: relative; top: -5px; }
-
-/* options table */
-
-.option-name { font-weight: bold;   }
-
-.option-type { font-style: italic; }
-
-table td { padding:10px; line-height:18px; }
-
-tr:nth-child(odd)		{ background-color:#eee; }
-
-tr:nth-child(even)		{ background-color:#fff; }
-
-/* code */
-
-pre { background: #EEE; margin:0 0 15px; padding: 10px; overflow: auto; font-size: 12px; }
