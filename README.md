@@ -8,7 +8,7 @@ About jFlow
 
 jFlow has gained popularity for its ease of use and compact size. It has been in development since 2007 and can be seen on thousands of websites.
 
-jFlow Online Demo: http://wordimpress.com/demos/jflowplus-v2/
+jFlow Online Demo: http://wordimpress.com/demos/jflow/
 
 How to Setup jFlow
 ------------------
