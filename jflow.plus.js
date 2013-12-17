@@ -59,7 +59,7 @@
                  
                     //if we are NOT on the last slide
                     if (i != 0) {
-                        $("#mySlides").animate({
+                        $(opts.slides).animate({
                             left: -(i * width)
                         }, function () {
                             //if we are on the last slide then move the first slide into position
@@ -148,7 +148,7 @@
 					
 				});
 				//animate the slide container into position
-				$('#mySlides').animate({
+				$(opts.slides).animate({
 					left: '0px'
 				});
 				
@@ -278,7 +278,7 @@
                         });
                         //add padding to display the last slide
                         //NEED TO MAKE DYMANIC
-                        $('#mySlides').animate({
+                        $(opts.slides).animate({
                             paddingLeft: width+"px"
                         });
                         //animate the last slide
@@ -293,7 +293,7 @@
                             });
                             //move the slide container position to the last slide
                             //NEED TO MAKE DYMANIC
-                            $('#mySlides').css({
+                            $(opts.slides).css({
                                 padding: "0px",
                                 left: "-"+(totalWidth - width)+"px"
                             });
@@ -315,7 +315,7 @@
 							$(opts.slides).find(":first-child").css('left','0px');
 						}
 
-                        $('#mySlides').animate({
+                        $(opts.slides).animate({
                             left: -(width * (cur - 1))
                         }, {
                             queue: false
