@@ -15,6 +15,7 @@
         var randNum = Math.floor(Math.random() * 11);
         var jFC = opts.controller;
         var jFS = opts.slideWrapper;
+		var jCon = opts.slideContainer;
         var jSel = opts.selectedWrapper;
         var cur = 0;
         var timer;
@@ -64,7 +65,7 @@
                         }, function () {
                             //if we are on the last slide then move the first slide into position
                             if ((slidesNum - 1) == i) {
-                                $(".jFlowSlideContainer").first().css({
+                                $("."+jCon).first().css({
                                     //left slide distance is equal to width of slide times number of slides
                                     left: (width * slidesNum)
                                 });
@@ -82,7 +83,7 @@
                     else {
 					
                         //animate the first slide container into position
-                        $(".jFlowSlideContainer").first().animate({
+                        $("."+jCon).first().animate({
                             //left slide distance is equal to width of slide times number of slides		
                             left: (width * slidesNum)
                        });
@@ -104,15 +105,15 @@
                             //position the slide container element back to start
                             $(this).css('left', '0px');
                             //position the first slide back to start
-                            $(".jFlowSlideContainer").first().css('left', '0px');
+                            $("."+jCon).first().css('left', '0px');
                       
 					  
 					    });
 						
 						
 						//move the selected class from the last li to the first
-						$('.jFlowSelected').removeClass('jFlowSelected');
-						$(jFC).first().addClass('jFlowSelected');
+						$('.'+jSel).removeClass(jSel);
+						$(jFC).first().addClass(jSel);
 						
                     }
                   
@@ -126,9 +127,9 @@
 		//pagination class
 		var movePagingClass = function() {
 				//advance the 'selected' pagination class 
-				var thisController = $('.jFlowSelected');
-				$(thisController).removeClass('jFlowSelected');
-				$(thisController).next().addClass('jFlowSelected');		
+				var thisController = $('.'+jSel);
+				$(thisController).removeClass(jSel);
+				$(thisController).next().addClass(jSel);		
 		}
 		
 
@@ -142,7 +143,7 @@
 			$(jFC).first().click(function() {
 			
 				//ensure the first slide is in position
-				$('.jFlowSlideContainer').first().css({
+				$("."+jCon).first().css({
 					
 					left: '0px'
 					
@@ -194,7 +195,7 @@
         $(opts.slides).before('<div id="' + jFS.substring(1, jFS.length) + '"></div>').appendTo(jFS);
         //find each of our slide elements and wrap them
         $(opts.slides).find(".slide").each(function () {
-            $(this).before('<div class="jFlowSlideContainer"></div>').appendTo($(this).prev());
+            $(this).before('<div class="'+jCon+'"></div>').appendTo($(this).prev());
         });
         //initialize the controller
         $(jFC).eq(cur).addClass(jSel);
@@ -272,7 +273,7 @@
                             width: (width * additionalSlide)
                         });
 										
-                        $('.jFlowSlideContainer:last').css({
+                        $("."+jCon).last().css({
                             position: "absolute",
                             left: "-"+width+"px"
                         });
@@ -282,7 +283,7 @@
                             paddingLeft: width+"px"
                         });
                         //animate the last slide
-                        $('.jFlowSlideContainer:last').animate({
+                        $("."+jCon).last().animate({
                             left: "0px"
                         }, function () {
                             //change the position of this last slide
@@ -304,8 +305,8 @@
                          cur = slidesNum - 1;
 						 
 						//move the selected class from the last li to the first
-						$('.jFlowSelected').removeClass('jFlowSelected');
-						$(jFC).last().addClass('jFlowSelected');
+						$('.'+jSel).removeClass(jSel);
+						$(jFC).last().addClass(jSel);
 						 
                     } //else slide as normal
                     else {
@@ -323,9 +324,9 @@
                         cur = cur - 1;
 						
                     	//advance the 'selected' pagination class 
-						var thisController = $('.jFlowSelected');
-						$(thisController).removeClass('jFlowSelected');
-						$(thisController).prev().addClass('jFlowSelected');	
+						var thisController = $(jSel);
+						$(thisController).removeClass(jSel);
+						$(thisController).prev().addClass(jSel);	
 						
 						
 					}
@@ -339,7 +340,7 @@
         var donext = function (x) {
 			
 				if(cur == lastSlide) {
-					$(".jFlowSlideContainer").first().css({
+					$("."+jCon).first().css({
 						"left": totalWidth+"px"
 						});
 				}
@@ -403,6 +404,8 @@
         controller: ".jFlowControl",
 		// must be id, use # sign
         slideWrapper: "#jFlowSlider",
+		// name slide container
+		slideContainer: "jFlowSlideContainer",
         // the div where all your sliding divs are nested in
         slides: "#mySlides",
         // just pure text, no sign
